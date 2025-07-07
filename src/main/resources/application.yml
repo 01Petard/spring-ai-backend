@@ -1,0 +1,31 @@
+server:
+  port: 5174
+spring:
+  application:
+    name: heima-ai
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+#        model: qwen3:0.6b
+#        model: gemma3:1b
+#        model: deepseek-r1:1.5b
+        model: llama3.2:1b
+        options:
+          temperature: 0.7
+    openai:
+      api-key: sk-0c855b1a08634e48b9b5680785f9d8f7
+      base-url: https://api.deepseek.com/chat/completions
+      chat:
+        options:
+          model: deepseek-chat
+          temperature: 0.7
+  data:
+    redis:
+      host: 1.94.147.176
+      port: 6379
+      password: kjiolluy711
+logging:
+  level:
+    org.springframework.ai: debug
+    com.itheima.ai: debug
