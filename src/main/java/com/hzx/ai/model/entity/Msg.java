@@ -1,4 +1,4 @@
-package com.itheima.ai.model.entity;
+package com.hzx.ai.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

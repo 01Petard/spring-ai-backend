@@ -1,7 +1,7 @@
-package com.itheima.ai.controller;
+package com.hzx.ai.controller;
 
-import com.itheima.ai.model.vo.MsgVO;
-import com.itheima.ai.repository.ChatHistoryRepository;
+import com.hzx.ai.model.vo.MsgVO;
+import com.hzx.ai.repository.ChatHistoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.messages.Message;

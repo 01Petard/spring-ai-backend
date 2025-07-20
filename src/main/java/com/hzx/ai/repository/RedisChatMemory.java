@@ -1,8 +1,8 @@
-package com.itheima.ai.repository;
+package com.hzx.ai.repository;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.itheima.ai.model.entity.Msg;
+import com.hzx.ai.model.entity.Msg;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.messages.Message;

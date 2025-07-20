@@ -1,10 +1,10 @@
-package com.itheima.ai.repository;
+package com.hzx.ai.repository;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.itheima.ai.model.entity.Msg;
+import com.hzx.ai.model.entity.Msg;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;

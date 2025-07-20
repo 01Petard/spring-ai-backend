@@ -1,4 +1,4 @@
-package com.itheima.ai.repository;
+package com.hzx.ai.repository;
 
 import java.util.List;
 

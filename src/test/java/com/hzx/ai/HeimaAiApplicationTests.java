@@ -1,6 +1,6 @@
-package com.itheima.ai;
+package com.hzx.ai;
 
-import com.itheima.ai.utils.VectorDistanceUtils;
+import com.hzx.ai.utils.VectorDistanceUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.openai.OpenAiEmbeddingModel;

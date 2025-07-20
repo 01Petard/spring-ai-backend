@@ -1,4 +1,4 @@
-package com.itheima.ai.model.vo;
+package com.hzx.ai.model.vo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
-package com.itheima.ai.controller;
+package com.hzx.ai.controller;
 
-import com.itheima.ai.repository.ChatHistoryRepository;
-import com.itheima.ai.service.ChatService;
+import com.hzx.ai.repository.ChatHistoryRepository;
+import com.hzx.ai.service.ChatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

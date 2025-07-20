@@ -1,4 +1,4 @@
-package com.itheima.ai.service;
+package com.hzx.ai.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;

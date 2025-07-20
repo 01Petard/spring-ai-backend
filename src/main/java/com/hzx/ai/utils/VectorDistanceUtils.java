@@ -1,4 +1,4 @@
-package com.itheima.ai.utils;
+package com.hzx.ai.utils;
 
 public class VectorDistanceUtils {
 

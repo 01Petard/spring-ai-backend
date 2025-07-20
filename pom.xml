@@ -8,11 +8,9 @@
         <version>3.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.itheima</groupId>
+    <groupId>com.hzx</groupId>
     <artifactId>spring-ai-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>heima-ai</name>
-    <description>heima-ai</description>
     <url/>
     <licenses>
         <license/>

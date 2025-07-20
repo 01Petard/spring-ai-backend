@@ -1,4 +1,4 @@
-package com.itheima.ai.config;
+package com.hzx.ai.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
