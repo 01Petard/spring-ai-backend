@@ -119,5 +119,29 @@
     "metadata" : {
       "messageType" : "ASSISTANT"
     }
+  }, {
+    "messageType" : "USER",
+    "text" : "这个图片你看出什么?",
+    "metadata" : {
+      "messageType" : "USER"
+    }
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "我不太清楚。作为一个智能助手，正常情况下I不会直接看到图片。但是，如果您想使用一些图像或视频作为提示或者帮助功能的例子，我可以尝试通过提供有关该图像的信息来帮助您。\n\n如果您能提供更多关于“[img-0]”这个图片的信息，我会尽我所能为您提供更好的支持和帮助。",
+    "metadata" : {
+      "messageType" : "ASSISTANT"
+    }
+  }, {
+    "messageType" : "USER",
+    "text" : "这个图片你看出什么?",
+    "metadata" : {
+      "messageType" : "USER"
+    }
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "<think>\n\n</think>\n\n我很乐意帮助您！不过，作为一个AI助手，我无法直接查看或分析图片。不过，如果您能告诉我图片中的人物是谁，或者图片的背景、主题等，我或许能提供一些相关信息或帮助。",
+    "metadata" : {
+      "messageType" : "ASSISTANT"
+    }
   } ]
 }
