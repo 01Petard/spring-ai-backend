@@ -1,17 +1,18 @@
-package com.hzx.ai.repository;
+package com.hzx.ai.config.repository;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hzx.ai.model.entity.Msg;
+import com.hzx.ai.model.Msg;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @RequiredArgsConstructor
-//@Component
+@Component
 public class RedisChatMemory implements ChatMemory {
 
     private final static String PREFIX = "chat:";

@@ -1,15 +1,22 @@
-package com.hzx.ai.repository;
+package com.hzx.ai.config.repository;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * 对话历史存到Redis中
+ * @author hzx
+ */
 @RequiredArgsConstructor
-//@Component
-public class RedisChatHistory implements ChatHistoryRepository {
+@Component
+@Primary
+public class RedisChatHistoryRepository implements com.hzx.ai.config.repository.ChatHistoryRepository {
 
     private final static String CHAT_HISTORY_KEY_PREFIX = "chat:history:";
     private final StringRedisTemplate redisTemplate;

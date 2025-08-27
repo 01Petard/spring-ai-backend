@@ -7,11 +7,8 @@ spring:
     ollama:
       base-url: http://localhost:11434
       chat:
-#        model: qwen3:0.6b
-#        model: gemma3:1b
-#        model: deepseek-r1:1.5b
-#        model: llama3.2:1b
-        model: qwen2.5vl:3b
+        model: deepseek-r1:1.5b  # 思考模型
+#        model: qwen2.5vl:3b      # 视觉模型
         options:
           temperature: 0.8
     openai:

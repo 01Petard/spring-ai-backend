@@ -1,4 +1,4 @@
-package com.hzx.ai.repository;
+package com.hzx.ai.config.repository;
 
 import java.util.List;
 

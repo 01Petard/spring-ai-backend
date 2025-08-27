@@ -1,4 +1,4 @@
-package com.hzx.ai.model.entity;
+package com.hzx.ai.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,7 +29,7 @@ public class Msg {
     public Message toMessage() {
         return switch (messageType) {
             case SYSTEM -> new SystemMessage(text);
-            case USER -> new UserMessage(text, List.of(), metadata);
+            case USER -> new UserMessage(text);
             case ASSISTANT -> new AssistantMessage(text, metadata, List.of(), List.of());
             default -> throw new IllegalArgumentException("Unsupported message type: " + messageType);
         };

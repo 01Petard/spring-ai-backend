@@ -28,10 +28,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * 对话测试接口
+ * @author hzx
+ */
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/ai/test")
-public class SpringAITestController {
+public class TestController {
 
     /**
      * 本地优先：Ollama ChatModel（由 spring-ai-ollama-spring-boot-starter 自动装配）
@@ -56,8 +60,8 @@ public class SpringAITestController {
      * 服务端推送流（SSE）
      */
 //    @GetMapping(value = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    @GetMapping(value = "/stream", produces = "text/html;charset=utf-8")
 //    @GetMapping(value = "/stream", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/stream", produces = "text/html;charset=utf-8")
     public Flux<String> stream(
             @RequestParam(value = "message", defaultValue = "给我讲个笑话") String message) {
 
@@ -73,8 +77,8 @@ public class SpringAITestController {
      */
     @GetMapping("/ollama/multimodal")
     public String multimodal(
-            @RequestParam(value = "message", defaultValue = "这个图片你看出什么?大胆猜测一下这个人的身份") String message
-    ) throws IOException {
+            @RequestParam(value = "message", defaultValue = "这个图片你看出什么?") String message
+    ) {
         // 图片路径
         Media imageMedia = Media.builder()
 

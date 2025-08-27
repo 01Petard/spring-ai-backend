@@ -1,9 +1,10 @@
 package com.hzx.ai.controller;
 
-import com.hzx.ai.repository.ChatHistoryRepository;
+import com.hzx.ai.config.repository.ChatHistoryRepository;
 import com.hzx.ai.service.ChatService;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,11 +26,11 @@ public class ChatController {
 
     private final ChatHistoryRepository chatHistoryRepository;
 
-    @GetMapping(value = "/chat", produces = "text/html;charset=utf-8")
+    @PostMapping(value = "/chat", produces = "text/html;charset=utf-8")
     public Flux<String> chat(
-            @RequestParam("prompt") String prompt,
-            @RequestParam("chatId") String chatId,
-            @RequestParam(value = "files", required = false) List<MultipartFile> files
+            @RequestParam("prompt") @Schema(description = "对话内容") String prompt,
+            @RequestParam("chatId") @Schema(description = "对话id") String chatId,
+            @RequestParam(value = "files", required = false) @Schema(description = "附件") List<MultipartFile> files
     ) {
         // 1.保存会话id
         chatHistoryRepository.save("chat", chatId);

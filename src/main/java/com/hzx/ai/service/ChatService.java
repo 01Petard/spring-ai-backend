@@ -2,6 +2,7 @@ package com.hzx.ai.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvisor;
 import org.springframework.ai.model.Media;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MimeType;
@@ -10,8 +11,6 @@ import reactor.core.publisher.Flux;
 
 import java.util.List;
 import java.util.Objects;
-
-import static org.springframework.ai.chat.client.advisor.AbstractChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY;
 
 /**
  * @author zexiao.huang
@@ -30,14 +29,27 @@ public class ChatService {
                 .content();
     }
 
+    /**
+     * 纯文本对话
+     * @param prompt
+     * @param chatId
+     * @return
+     */
     public Flux<String> textChat(String prompt, String chatId) {
         return chatClient.prompt()
                 .user(prompt)
-                .advisors(a -> a.param(CHAT_MEMORY_CONVERSATION_ID_KEY, chatId))
+                .advisors(a -> a.param(AbstractChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY, chatId))
                 .stream()
                 .content();
     }
 
+    /**
+     * 多模态对话
+     * @param prompt
+     * @param chatId
+     * @param files
+     * @return
+     */
     public Flux<String> multiModalChat(String prompt, String chatId, List<MultipartFile> files) {
         // 1.解析多媒体
         List<Media> medias = files.stream()
@@ -50,7 +62,7 @@ public class ChatService {
         // 2.请求模型
         return chatClient.prompt()
                 .user(p -> p.text(prompt).media(medias.toArray(Media[]::new)))
-                .advisors(a -> a.param(CHAT_MEMORY_CONVERSATION_ID_KEY, chatId))
+                .advisors(a -> a.param(AbstractChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY, chatId))
                 .stream()
                 .content();
     }

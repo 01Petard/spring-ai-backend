@@ -1,7 +1,7 @@
 package com.hzx.ai.controller;
 
-import com.hzx.ai.model.vo.MsgVO;
-import com.hzx.ai.repository.ChatHistoryRepository;
+import com.hzx.ai.model.MsgVO;
+import com.hzx.ai.config.repository.ChatHistoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.messages.Message;

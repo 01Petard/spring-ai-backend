@@ -1,10 +1,10 @@
-package com.hzx.ai.repository;
+package com.hzx.ai.config.repository;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.hzx.ai.model.entity.Msg;
+import com.hzx.ai.model.Msg;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
@@ -24,10 +24,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 对话历史存到内存中
+ * @author hzx
+ */
+@RequiredArgsConstructor
 @Slf4j
 @Component
-@RequiredArgsConstructor
-public class InMemoryChatHistoryRepository implements ChatHistoryRepository {
+public class InMemoryChatHistoryRepository implements com.hzx.ai.config.repository.ChatHistoryRepository {
 
     private final ObjectMapper objectMapper;
     private final ChatMemory chatMemory;
